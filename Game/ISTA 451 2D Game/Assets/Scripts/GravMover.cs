@@ -54,11 +54,11 @@ public class GravMover : MonoBehaviour {
         foundFooting = false;
         if (inJump)
         {
-            animator.Play("FallingAnimation");
+            animator.Play("LintFallingAnimation");
         }
         else
         {
-            animator.Play("FullJumpAnimation");
+            animator.Play("LintJumpUpAnimation");
         }
         pulledDown = true;
 
@@ -78,7 +78,7 @@ public class GravMover : MonoBehaviour {
             transform.position = vehicleposition;
             if (foundFooting && !pulledDown)
             {
-                animator.Play("RunAnimation");
+                animator.Play("LintMoveAnimation");
             }
             transform.localScale = new Vector2(scaleX, scaleY);
 
@@ -91,7 +91,7 @@ public class GravMover : MonoBehaviour {
             transform.position = vehicleposition;
             if (foundFooting && !pulledDown)
             {
-                animator.Play("RunAnimation");
+                animator.Play("LintMoveAnimation");
             }
             transform.localScale = new Vector2(-scaleX, scaleY);
         }
@@ -100,7 +100,7 @@ public class GravMover : MonoBehaviour {
             if (foundFooting && !pulledDown)
             {
 
-                animator.Play("IdleAnimation");
+                animator.Play("LintIdleAnimation");
 
 
             }

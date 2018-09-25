@@ -11,6 +11,7 @@ public class CharMover : MonoBehaviour
 
     public float Speed = 0;
     public float Jump_Force_yAxis = 0;
+    public float gravity = 1;
 
     private bool isJumping = false;
     private bool foundFooting = false;
@@ -40,15 +41,15 @@ public class CharMover : MonoBehaviour
         rb.AddForce(new Vector2(0, Jump_Force_yAxis + 12.5f), ForceMode2D.Impulse);
         isJumping = false;
         pulledDown = true;
-        animator.Play("FullJumpAnimation");
-        animator.Play("FullJump2Animation");
+        animator.Play("LintJumpUpAnimation");
+        animator.Play("LintJumpAnimation2");
 
     }
 
     // Constant gravity to pull down the player when NOT in contact with the collider of the 'platform GameObject'
     void goDown()
     {
-        rb.AddForce(new Vector2(0, -1), ForceMode2D.Impulse);
+        rb.AddForce(new Vector2(0, -gravity), ForceMode2D.Impulse);
         isJumping = false;
         pulledDown = true;
     }
@@ -57,7 +58,7 @@ public class CharMover : MonoBehaviour
     void OnCollisionStay2D(Collision2D col)
     {
         GameObject obj = col.gameObject;
-        if ((obj.GetComponent<BoxCollider2D>().transform.position.y)<= this.gameObject.transform.position.y)
+        if ((obj.GetComponent<Collider2D>().transform.position.y)<= this.gameObject.transform.position.y)
         {
             if (obj.tag == "Floor") 
             {
@@ -84,10 +85,10 @@ public class CharMover : MonoBehaviour
         foundFooting = false;
         if (inJump)
         {
-            animator.Play("FallingAnimation");
+            animator.Play("LintFallingAnimation");
         }
         else {
-            animator.Play("FullJumpAnimation");
+            animator.Play("LintJumpUpAnimation");
         }
         pulledDown = true;
         
@@ -107,7 +108,7 @@ public class CharMover : MonoBehaviour
             transform.position = vehicleposition;
             if (foundFooting && !pulledDown)
             {
-                animator.Play("RunAnimation");
+                animator.Play("LintMoveAnimation");
             }
             transform.localScale = new Vector2(scaleX, scaleY);
 
@@ -120,7 +121,7 @@ public class CharMover : MonoBehaviour
             transform.position = vehicleposition;
             if (foundFooting && !pulledDown)
             {
-                animator.Play("RunAnimation");
+                animator.Play("LintMoveAnimation");
             }
             transform.localScale = new Vector2(-scaleX, scaleY);
         }
@@ -129,7 +130,7 @@ public class CharMover : MonoBehaviour
             if (foundFooting && !pulledDown)
             {
                 
-                animator.Play("IdleAnimation");
+                animator.Play("LintIdleAnimation");
                 
                
             }
@@ -160,6 +161,10 @@ public class CharMover : MonoBehaviour
 
         if (rb.velocity.y < 0) {
             inJump = true;
+            if (!foundFooting)
+            {
+                animator.Play("LintFallingAnimation");
+            }
         }
 
         //Enabling OR disabling gravity bool conditions
