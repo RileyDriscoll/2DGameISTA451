@@ -39,6 +39,7 @@ public class CharMover : MonoBehaviour
     void GoUp()
     {
         rb.AddForce(new Vector2(0, Jump_Force_yAxis + 12.5f), ForceMode2D.Impulse);
+        this.GetComponent<AudioSource>().Play();
         isJumping = false;
         pulledDown = true;
         animator.Play("LintJumpUpAnimation");

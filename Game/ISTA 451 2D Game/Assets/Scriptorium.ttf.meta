@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 84ac3b636e2828b458f881e07d0818ee
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Scriptorium
+  fontNames:
+  - Scriptorium
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d27f175ced45ade42b0b1b6a18215389, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

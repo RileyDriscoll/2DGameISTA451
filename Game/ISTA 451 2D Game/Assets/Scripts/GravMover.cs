@@ -5,6 +5,7 @@ using UnityEngine;
 public class GravMover : MonoBehaviour {
 
     public float Speed = 0;
+    public float gravity;
 
     private bool isJumping = false;
     private bool foundFooting = false;
@@ -112,6 +113,7 @@ public class GravMover : MonoBehaviour {
         {
             isJumping = true;
             gravSwap = !gravSwap;
+            this.GetComponent<AudioSource>().Play();
 
             if (gravSwap)
             {
@@ -145,13 +147,13 @@ public class GravMover : MonoBehaviour {
 
         if (gravSwap)
         {
-            GetComponent<Rigidbody2D>().gravityScale = -4;
+            GetComponent<Rigidbody2D>().gravityScale = -gravity;
             transform.localScale = new Vector3(transform.localScale.x,-1,1);
             
         }
         else
         {
-            GetComponent<Rigidbody2D>().gravityScale = 4;
+            GetComponent<Rigidbody2D>().gravityScale = gravity;
             transform.localScale = new Vector3(transform.localScale.x, 1, 1);
             
         }

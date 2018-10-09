@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Floor
   - Kill
+  - Tracker
   layers:
   - Default
   - TransparentFX

@@ -4,4 +4,22 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: d7b88d175ca065848b7c917b8423a2b1
+  - enabled: 1
+    path: Assets/Scenes/OlmechMain.unity
+    guid: ff16b61a305fc854aa587d1b1926e762
+  - enabled: 1
+    path: Assets/Scenes/BeforeLevel.unity
+    guid: fa01ddb79774fce4cbeafbd13cdc7e36
+  - enabled: 1
+    path: Assets/Scenes/DoubleJumpLevel1.unity
+    guid: 6e5101e778e1f0b4d8e7d5dd1dd279d5
+  - enabled: 1
+    path: Assets/Scenes/OlmechLevelClear.unity
+    guid: cff058a62e5d4ed41ac1f6a43af58706
+  - enabled: 1
+    path: Assets/Scenes/GravSwapLevel1.unity
+    guid: 353bc4db3f6dc204dac8e0868439d7fb
