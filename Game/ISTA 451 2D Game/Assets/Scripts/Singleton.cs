@@ -7,7 +7,7 @@ public class Singleton : MonoBehaviour {
 
     public static Singleton tracker;
 	// Use this for initialization
-	void Start () {
+	void Awake () {
 		if(tracker != null)
         {
             Destroy(this.gameObject);

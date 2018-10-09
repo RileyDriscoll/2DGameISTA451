@@ -10,10 +10,7 @@ public class TimeTracker : MonoBehaviour {
     public bool stop;
     private SceneObjects timer;
 
-	// Use this for initialization
-	void Start () {
-		
-	}
+	
 	
 	// Update is called once per frame
 	void Update () {
@@ -36,6 +33,7 @@ public class TimeTracker : MonoBehaviour {
             if (minutes < 0f)
             {
                 SceneManager.LoadScene("MainMenu");
+                Destroy(gameObject);
             }
 
             timer = SceneObjects.singlton;

@@ -9,9 +9,9 @@ public class RandomLevel : MonoBehaviour {
     private string prevLevel;
     public string[] possibleLevels;
 
-	void Start () {
+	void Awake () {
         prevLevel = "";
-        possibleLevels = new string[] {"DoubleJumpLevel1", "GravSwapLevel1" };
+        possibleLevels = new string[] {"DoubleJumpLevel1", "GravSwapLevel1", "GravSwapLevel2", "DoubleJumpLevel2" };
 	}
 
     public void ChooseRandomLevel()

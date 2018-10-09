@@ -23,3 +23,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/GravSwapLevel1.unity
     guid: 353bc4db3f6dc204dac8e0868439d7fb
+  - enabled: 1
+    path: Assets/Scenes/GravSwapLevel2.unity
+    guid: 9998f1ebf1242e2488102a3202315507
+  - enabled: 1
+    path: Assets/Scenes/DoubleJumpLevel2.unity
+    guid: f5699f33c034b2349a217e84cceedad1
