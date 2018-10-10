@@ -290,7 +290,7 @@ MonoBehaviour:
   - Will you take the challenge and reach the top?
   - WSAD to move, Space to jump, esc to quit.
   - Best of luck
-  baseReadSpeed: 5
+  baseReadSpeed: 7
   timerText: {fileID: 1150718920}
 --- !u!82 &718076439
 AudioSource:
